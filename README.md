@@ -1,7 +1,6 @@
 # Crypto Wallet Server
 
-## Author
-Samir Saren (ft34_022)
+## Samir Saren (ft34_022)
 
 ## Description
 The Crypto Wallet Server is a RESTful API service for managing cryptocurrency wallets. It allows users to register, log in, and perform various wallet operations such as retrieving balances, listing transactions, transferring funds, calculating transaction fees, and fetching currency exchange rates. All requests are validated using Rest Assured.
