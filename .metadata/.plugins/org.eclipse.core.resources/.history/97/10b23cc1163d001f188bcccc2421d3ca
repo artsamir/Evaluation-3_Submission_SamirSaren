@@ -1,0 +1,24 @@
+package restAssured;
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+
+import static io.restassured.RestAssured.*;
+
+import org.json.simple.JSONObject;
+import org.testng.annotations.Test;
+
+
+public class CryptoCurrency {
+	
+	@Test
+	public void registerUser() {
+		
+		JSONObject js = new JSONObject();
+		js.put("username", "user123");
+		js.put("password", "securepassword");
+		js.put("email", "user@example.com");
+//		given().contentType(ContentType.JSON).body(null)
+	}
+
+}

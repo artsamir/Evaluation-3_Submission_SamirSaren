@@ -1,0 +1,29 @@
+package restAssured;
+
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+
+import static io.restassured.RestAssured.*;
+import io.restassured.response.Response;
+//import static io.restassured.matcher.RestAssuredMatchers.*;
+//import static org.hamcrest.Matchers.*;
+import org.json.simple.JSONObject;
+import org.testng.annotations.Test;
+
+
+public class CryptoCurrency {
+	
+	@Test
+	public void registerUser() {
+		
+		JSONObject js = new JSONObject();
+		js.put("username", "user123");
+		js.put("password", "securepassword");
+		js.put("email", "user@example.com");
+		
+		given().contentType("Application/JSON").body(js.toJSONString()).when().post("https://crypto-wallet-server.mock.beeceptor.com/api/v1/register")
+		.then().statusCode(200).log().all();
+	}
+	
+
+}
